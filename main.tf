@@ -3,7 +3,7 @@ resource "null_resource" "null-tests" {
     triggers = {
         test = "test"
     }
-    # provisioner "local-exec" {
-    #     command = "echo ${self.triggers.test}"
-    # }
+    provisioner "local-exec" {
+        command = "echo ${self.triggers.test}"
+    }
 }
